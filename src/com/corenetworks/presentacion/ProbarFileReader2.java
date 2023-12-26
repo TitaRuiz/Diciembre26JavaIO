@@ -5,14 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class ProbarFileReader {
+public class ProbarFileReader2 {
 
     public static void main(String[] args) {
         //Definir variables
         char[] buffer = new char[128];
         int caracterLeido;
         try {
-            FileReader fEntrada = new FileReader("salida.txt");
+            FileReader fEntrada = new FileReader("prueba1.txt");
             caracterLeido = fEntrada.read(buffer);
             System.out.println("Caracteres leidos ->"+ caracterLeido);
             System.out.println(Arrays.toString(buffer));
@@ -20,7 +20,6 @@ public class ProbarFileReader {
                 System.out.println("Entra al bucle");
                 caracterLeido = fEntrada.read(buffer);
                 System.out.println(Arrays.toString(buffer));
-
             }
             fEntrada.close();
         } catch (FileNotFoundException e) {
